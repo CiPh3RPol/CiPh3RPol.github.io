@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Pol.dev</title>
+</head>
+<body>
+  <div class="page-wrapper">
+  <header class="header-title">
+      <div class="title-text">
+        <h1>cipherPol</h1>
+        <h4>Security Researcher</h4>
+        <p>Just got started</p>
+        <div class="social-links">
+      <ul>
+        <li>
+          <a href="https://app.hackthebox.com/public/users/920828"> <img src="images/htb.svg" alt="no image found" width="30" height="30"/></a>
+        </li>
+        <li>
+          <a href="https://github.com/CiPh3RPol"> <img src="images/github-mark-white.svg" alt="no image found" width="30" height="30"/></a>
+        </li>
+        <li>
+          <a href="https://linkedin.com"> <img src="images/linkedin-svgrepo-com.svg" alt="no image found" width="30" height="30"/></a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    
+  </header>
+
+
+
+  <nav id="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contributions.html" class="menu-link">Contributions</a></li>
+      <li><a href="certs.html" class="menu-link">Certifications</a></li>
+    </ul>
+  </nav>
+
+
+<div id="iframe-container">
+  <iframe id="content-frame" src="loading.html"></iframe>
+</div>
+
+<script>
+  const links = document.querySelectorAll('.menu-link');
+  const iframe = document.getElementById('content-frame');
+
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default link navigation
+      const url = this.getAttribute('href'); // Get target HTML file
+      iframe.setAttribute('src', url); // Load it into the iframe
+    });
+  });
+</script>
+
+</div>
+</body>
+</html>
